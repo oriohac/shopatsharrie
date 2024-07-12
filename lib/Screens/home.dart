@@ -43,7 +43,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 213, 214, 215),
         automaticallyImplyLeading: false,
-        actions: [Row(children: [const Text("Sharrie's Signature"),Spacer(),Icon(Icons.shopping_cart_outlined)],)],
+        actions: const [Row(children: [Text("Sharrie's Signature"),Spacer(),Icon(Icons.shopping_cart_outlined)],)],
       ),
       backgroundColor: const Color.fromARGB(255, 213, 214, 215),
       body: Center(

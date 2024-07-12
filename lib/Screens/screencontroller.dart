@@ -30,6 +30,9 @@ class _ScreencontrollerState extends State<Screencontroller> {
       Search(),
     ];
     return Scaffold(
+      appBar: AppBar(
+        actions: const [Row(children: [Text("Sharrie's Signature"),Spacer(),Icon(Icons.shopping_cart_outlined)],)],
+      ),
       body: screens[selectedScreen],
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.black,
