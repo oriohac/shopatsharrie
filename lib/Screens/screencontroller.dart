@@ -38,9 +38,9 @@ class _ScreencontrollerState extends State<Screencontroller> {
         onTap: currentScreen,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: 'Wishlist'),
-          BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: 'Profile'),
-          BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: 'Search'),
+          BottomNavigationBarItem(icon: Icon(Icons.favorite_border), label: 'Wishlist'),
+          BottomNavigationBarItem(icon: Icon(Icons.person_outlined), label: 'Profile'),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
         ],
       ),
     );
