@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:math';
 
+import 'package:cupertino_icons/cupertino_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:shopatsharrie/Screens/animatedloading.dart';
@@ -42,6 +43,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 213, 214, 215),
         automaticallyImplyLeading: false,
+        actions: [Row(children: [const Text("Sharrie's Signature"),Spacer(),Icon(Icons.shopping_cart_outlined)],)],
       ),
       backgroundColor: const Color.fromARGB(255, 213, 214, 215),
       body: Center(
