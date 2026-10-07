@@ -5,13 +5,15 @@ class Productsdata {
   final bool isAvailable;
   final double currentprice;
   final double availableQuantity;
+  final String uniqueid;
   Productsdata(
       {required this.name,
       required this.photos,
       this.description,
       required this.isAvailable,
       required this.currentprice,
-      required this.availableQuantity});
+      required this.availableQuantity,
+      required this.uniqueid});
 
   factory Productsdata.fromJson(dynamic json) {
     var photoList = json['photos'] as List;
@@ -34,6 +36,7 @@ class Productsdata {
       isAvailable: json['is_available'] ?? false,
       currentprice: currentPrice,
       availableQuantity: json['available_quantity'] ?? 0,
+      uniqueid: json['unique_id']?? '',
     );
   }
 }

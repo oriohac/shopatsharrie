@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:shopatsharrie/Screens/cart.dart';
 import 'package:shopatsharrie/Screens/home.dart';
 import 'package:shopatsharrie/Screens/profile.dart';
 import 'package:shopatsharrie/Screens/search.dart';
 import 'package:shopatsharrie/Screens/wishlist.dart';
+import 'package:shopatsharrie/model/productsdata.dart';
 
 class Screencontroller extends StatefulWidget {
   const Screencontroller({super.key});
@@ -30,19 +32,20 @@ class _ScreencontrollerState extends State<Screencontroller> {
       Search(),
     ];
     return Scaffold(
-      appBar: AppBar(
-        actions: const [Row(children: [Text("Sharrie's Signature"),Spacer(),Icon(Icons.shopping_cart_outlined)],)],
-      ),
       body: screens[selectedScreen],
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.black,
         unselectedItemColor: Colors.grey,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
         currentIndex: selectedScreen,
         onTap: currentScreen,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite_border), label: 'Wishlist'),
-          BottomNavigationBarItem(icon: Icon(Icons.person_outlined), label: 'Profile'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.favorite_border), label: 'Wishlist'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person_outlined), label: 'Profile'),
           BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
         ],
       ),
